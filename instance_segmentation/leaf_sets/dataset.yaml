@@ -1,0 +1,6 @@
+train: F:\FubingZhang\Yolov8_Beginner_Demo\instance_segmentation\leaf_sets/images/train/
+val: F:\FubingZhang\Yolov8_Beginner_Demo\instance_segmentation\leaf_sets/images/val/
+
+nc: 1
+
+names: ['leaf']
