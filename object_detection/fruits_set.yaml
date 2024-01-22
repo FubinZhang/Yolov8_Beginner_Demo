@@ -1,0 +1,6 @@
+train: F:\FubingZhang\Yolov8_Beginner_Demo\object_detection\fruits_sets/images/train/
+val: F:\FubingZhang\Yolov8_Beginner_Demo\object_detection\fruits_sets/images/val/
+
+nc: 3
+
+names: ['orange', 'tomato', 'apple']
