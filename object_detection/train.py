@@ -8,4 +8,6 @@ model = YOLO('yolov8n.yaml').load('yolov8n.pt')  # 从YAML文件构建模型并�
 
 
 # 训练模型 设置参数注意/workers线程数/device/epochs/
-results = model.train(data='./fruits_set.yaml', epochs=50, batch=16, imgsz=640, device=0, workers=0, save_period=50)
+results = model.train(data='./fruits_sets/dataset.yaml', epochs=50, batch=16, imgsz=640, device=0, workers=0, save_period=50)
+
+# 建议把dataset中的路径设置为绝对路径
