@@ -32,13 +32,13 @@
 
 转换格式可通过开源项目转化
 
-`https://github.com/rooneysh/Labelme2YOLO`（同样适用于`目标检测`/`实例分割`）
+`https://github.com/rooneysh/Labelme2YOLO`（同样适用于 `目标检测`/`实例分割`）
 
 or
 
 `https://github.com/TommyZihao/Label2Everything`
 
-（同样适用于`目标检测`/`实例分割`/`关键点检测`）
+（同样适用于 `目标检测`/`实例分割`/`关键点检测`）
 
 最终数据集文件格式如下：
 
@@ -67,11 +67,19 @@ names: ['orange', 'tomato', 'apple']
 
 ps：train和val最好使用绝对路径
 
+补ps：或者在最开始加一个path：.......之后train和val使用相对于path的相对路径
+
 ### （2）instance_segmentation
+
+在labelme中create polygon即可
 
 方法和文件目录格式同目标检测相同
 
 ### （3）keypoint_detection
+
+在labelme中create rectangle和create point即可
+
+注意由于关键点检测也是基于目标检测的，所以标注的时候要有rectangle和point两种
 
 方法和文件目录格式同上，需要注意的是 `dataset.yaml`的格式略有不一样
 
@@ -89,7 +97,6 @@ kpt_shape: [3, 3]
 names:
   0: apple
 ```
-
 
 ## 2.训练（train.py）
 
@@ -131,6 +138,5 @@ results = model('test.png', save=True, save_conf=True, conf=0.60, show=True)  # 
 照例首先是载入模型，然后是预测图片，同样预测函数中也有很多可调参数包括置信度(conf),是否保存,是否展示,是否按照种类筛选等等......
 
 在官方文档中有详细介绍 `https://docs.ultralytics.com/modes/predict/`
-
 
 后续待更。。。。。
