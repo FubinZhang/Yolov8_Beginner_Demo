@@ -1,4 +1,4 @@
-# Yolov8_Beginner_Demo
+# Yolov8_Beginner_Demo(yolov8入门样例)
 
 一份关于yolov8的训练以及预测的代码demo（目标检测/实例分割/关键点检测........）
 
